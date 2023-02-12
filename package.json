@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "divyaGrv",
+  "author": "divyaGrv",  
   "license": "ISC",
   "dependencies": {
     "node-cron": "^3.0.2",
