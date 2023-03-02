@@ -3,12 +3,12 @@
 // Hint:You Will have to Self Explore cron jobs in Nodejs,For this Assignment
 // Build a scheduler in JS with NodeJS framework and a script to run it for 10 events.
 // The event will consist of a text (string) and a date time at which it will run.
-// The scheduler must schedule the event to trigger a function at the date time mentioned in the event body.
+// The scheduler must schedule the event to trigger a function at the date time mentioned in the event body.  
 // The trigger function (API) must accept the text as input, sleep for the duration of text length and return text backwards
 
 
 const cron = require('node-cron');
-const events = [
+const events =  [
     { text: "textOne", dateTime: "5 44 21 11 2 6" },
     { text: "textTwo", dateTime: "30 10 21 12 2 0" },
     { text: "textThree", dateTime: "30 15 23 13 2 1" },
@@ -27,7 +27,7 @@ const events = [
 // as param (textOne) sleep for (7 seconds) and return/console log (enotxet)
 
 
-const trigger = (text) => {
+const trigger = (text) =>  {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(text.split("").reverse().join(""));
@@ -49,8 +49,8 @@ const scheduler = function () {
                 + currentDate.getSeconds() + "."
                 + currentDate.getMilliseconds();
             console.log(`dateTime: ${dateTime}`);
-        });
+        }) ;
     }
-};
+} ;
 
 scheduler();
